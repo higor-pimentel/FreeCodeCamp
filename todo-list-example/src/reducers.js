@@ -14,7 +14,7 @@ function VisibilityFilter(state = SHOW_ALL, action) {
         case SET_VISIBILITY_FILTER:
             return action.filter
         default:
-            state
+            return state
     }
 }
 
@@ -30,7 +30,7 @@ function todos(state=[], action){
             ]
         case TOGGLE_TODO:
             return state.map((todo, index) => {
-                if (index == action.index) {
+                if (index === action.index) {
                     return Object.assign({}, todo, {
                         completed: !todo.completed
                     })
@@ -42,7 +42,7 @@ function todos(state=[], action){
     }
 }
 
-const todoApp = combineReducers({
+const todoApp = conbineReducers({
     VisibilityFilter,
     todos
 })
