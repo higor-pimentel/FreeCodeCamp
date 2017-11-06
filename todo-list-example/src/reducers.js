@@ -1,4 +1,4 @@
-import { conbineReducers } from 'redux'
+import { combineReducers } from 'redux'
 
 import {
     ADD_TODO,
@@ -42,7 +42,7 @@ function todos(state=[], action){
     }
 }
 
-const todoApp = conbineReducers({
+const todoApp = combineReducers({
     VisibilityFilter,
     todos
 })
